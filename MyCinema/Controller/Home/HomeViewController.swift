@@ -9,13 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private let screen = Home()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .yellow
+        setupView()
     }
     
-
- 
+    private func setupView() {
+        view = screen
+    }
 
 }

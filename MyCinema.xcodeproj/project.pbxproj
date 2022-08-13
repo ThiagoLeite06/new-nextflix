@@ -17,6 +17,7 @@
 		7A04EF0228A7390700F9029C /* MyCinemaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A04EF0128A7390700F9029C /* MyCinemaUITestsLaunchTests.swift */; };
 		7A04EF0F28A7DB5900F9029C /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A04EF0E28A7DB5900F9029C /* MainTabViewController.swift */; };
 		7A04EF1128A7DCBC00F9029C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A04EF1028A7DCBC00F9029C /* HomeViewController.swift */; };
+		7A04EF1528A7E8B800F9029C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A04EF1428A7E8B800F9029C /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7A04EF0128A7390700F9029C /* MyCinemaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCinemaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A04EF0E28A7DB5900F9029C /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		7A04EF1028A7DCBC00F9029C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7A04EF1428A7E8B800F9029C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,8 @@
 		7A04EEDD28A7390600F9029C /* MyCinema */ = {
 			isa = PBXGroup;
 			children = (
+				7A04EF1628A7E8C000F9029C /* Controller */,
+				7A04EF1328A7E80200F9029C /* View */,
 				7A04EEDE28A7390600F9029C /* AppDelegate.swift */,
 				7A04EEE028A7390600F9029C /* SceneDelegate.swift */,
 				7A04EEE228A7390600F9029C /* ViewController.swift */,
@@ -108,7 +112,6 @@
 				7A04EEE928A7390700F9029C /* LaunchScreen.storyboard */,
 				7A04EEEC28A7390700F9029C /* Info.plist */,
 				7A04EF0E28A7DB5900F9029C /* MainTabViewController.swift */,
-				7A04EF1028A7DCBC00F9029C /* HomeViewController.swift */,
 			);
 			path = MyCinema;
 			sourceTree = "<group>";
@@ -128,6 +131,38 @@
 				7A04EF0128A7390700F9029C /* MyCinemaUITestsLaunchTests.swift */,
 			);
 			path = MyCinemaUITests;
+			sourceTree = "<group>";
+		};
+		7A04EF1228A7E7D800F9029C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7A04EF1428A7E8B800F9029C /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7A04EF1328A7E80200F9029C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A04EF1228A7E7D800F9029C /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A04EF1628A7E8C000F9029C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A04EF1728A7E8CE00F9029C /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7A04EF1728A7E8CE00F9029C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7A04EF1028A7DCBC00F9029C /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +299,7 @@
 				7A04EEE328A7390600F9029C /* ViewController.swift in Sources */,
 				7A04EF0F28A7DB5900F9029C /* MainTabViewController.swift in Sources */,
 				7A04EEDF28A7390600F9029C /* AppDelegate.swift in Sources */,
+				7A04EF1528A7E8B800F9029C /* Home.swift in Sources */,
 				7A04EEE128A7390600F9029C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
