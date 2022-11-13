@@ -17,6 +17,13 @@ final class Home: UIView {
         return titleLabel
     }()
     
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return collectionView
+    }()
+    
     // MARK: - Initializers
     
     override init(frame: CGRect) {

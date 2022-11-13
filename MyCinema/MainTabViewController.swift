@@ -11,23 +11,61 @@ final class MainTabViewController: UITabBarController {
     
     override func viewDidLoad() {
         configureViewControllers()
+        setupTabBar()
     }
     
     private func configureViewControllers() {
-        view.backgroundColor = .white
+        let homeVC = HomeViewController()
+        let moviesVC = MoviesViewController()
+        let seriesVC = SeriesViewController()
+        let favoritesVC = FavoritesViewController()
+        let profileVC = ProfileViewController()
         
-        self.tabBar.isTranslucent = false
+        homeVC.setTabBarImage(imageName: "house", title: "Início")
+        moviesVC.setTabBarImage(imageName: "film", title: "Filmes")
+        seriesVC.setTabBarImage(imageName: "tv", title: "Séries")
+        favoritesVC.setTabBarImage(imageName: "star", title: "Favoritos")
+        profileVC.setTabBarImage(imageName: "person", title: "Minha Conta")
         
-        let home = templateNavigationController(image: UIImage(systemName: "house")!, rootViewController: HomeViewController())
-                
-        viewControllers = [home]
+        let homeNC = UINavigationController(rootViewController: homeVC)
+        let moviesNC = UINavigationController(rootViewController: moviesVC)
+        let seriesNC = UINavigationController(rootViewController: seriesVC)
+        let favoritesNC = UINavigationController(rootViewController: favoritesVC)
+        let profileNC = UINavigationController(rootViewController: profileVC)
+        
+        let tabBarList = [homeNC, moviesNC, seriesNC, favoritesNC, profileNC]
+
+        viewControllers = tabBarList
+        
     }
 
-    private func templateNavigationController(image: UIImage, rootViewController: UIViewController) -> UINavigationController {
-        
-        let nav = UINavigationController(rootViewController: rootViewController)
-        nav.tabBarItem.image = image
-        
-        return nav
+    private func setupTabBar() {
+        tabBar.backgroundColor = .white
+        tabBar.isTranslucent = false
+        tabBar.tintColor = .systemPurple
+    }
+}
+
+class MoviesViewController: UIViewController {
+    override func viewDidLoad() {
+        view.backgroundColor = .systemPurple
+    }
+}
+
+class SeriesViewController: UIViewController {
+    override func viewDidLoad() {
+        view.backgroundColor = .systemRed
+    }
+}
+
+class FavoritesViewController: UIViewController {
+    override func viewDidLoad() {
+        view.backgroundColor = .systemTeal
+    }
+}
+
+class ProfileViewController: UIViewController {
+    override func viewDidLoad() {
+        view.backgroundColor = .lightGray
     }
 }

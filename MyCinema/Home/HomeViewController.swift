@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     private func setupView() {
         view = screen
+        screen.backgroundColor = .yellow
     }
 
 }
